@@ -7,16 +7,18 @@
     <title>MBP</title>
   </head>
   <body>
-    <h1 id="elapsed" class="center"></h1>
+<!--     <h1 id="elapsed" class="center"></h1> -->
+    <h1 id="uuid" class="center"></h1>
   </body>
   <script>
-    var timeToDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-    var orderDate = new Date(
-      "Sun Jun 05 2022 20:14:00 GMT+0100 (czas środkowoeuropejski standardowy)"
-    );
-    var orderArrivalDate = Date.now();
-    var elapsedDays = Math.round((orderArrivalDate - orderDate) / timeToDay);
-    document.getElementById("elapsed").innerHTML = `${elapsedDays} days`;
+    // var timeToDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    // var orderDate = new Date(
+    //   "Sun Jun 05 2022 20:14:00 GMT+0100 (czas środkowoeuropejski standardowy)"
+    // );
+    // var orderArrivalDate = Date.now();
+    // var elapsedDays = Math.round((orderArrivalDate - orderDate) / timeToDay);
+    // document.getElementById("elapsed").innerHTML = `${elapsedDays} days`;
+     document.getElementById("uuid").innerHTML = self.crypto.randomUUID();
   </script>
   <style>
     .center {
